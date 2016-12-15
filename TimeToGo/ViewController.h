@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+}
 
+- (IBAction)valueChangedElo:(id)sender;
+- (IBAction)travelTimeChanged:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblFinalTime;
+@property (weak, nonatomic) IBOutlet UILabel *lblTimeRemaining;
+@property NSDate *finalTime;
+@property NSDate *timeRemaining;
+@property NSDate *currentTime;
+@property NSDate *leaveTime;
+@property (strong, nonatomic) IBOutlet UIDatePicker *dpDeadline;
+@property (strong, nonatomic) IBOutlet UIDatePicker *dpTravelTime;
 @end
 
